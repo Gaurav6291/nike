@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Inventory System</title>
+    <style>
+
+.cont {
+    border: 1px solid black;
+    width: 90%;
+    height: 90vh;
+    margin: 5vh auto;
+}
+.part1 {
+    /* border: 1px solid red; */
+    width: 25%;
+    height: 100%;
+    float: left;
+    background-color: darkkhaki;
+
+    
+}
+.block{
+    display: block;
+}
+input{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    /* width: -webkit-fill-available; */
+}
+label {
+    font-size: x-large;
+}
+
+.part1 button {
+
+    width: 50%;
+    margin: 10% 20%;
+    border: 5px solid black;
+    border-radius: 5px;
+    font-size: larger;
+    padding: 2%;
+}
+.part2 {
+    /* border: 1px solid navy; */
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+
+#inner button{
+    
+    width: 20%;
+    margin: 5% 10%;
+    border: 1px solid darkgoldenrod;
+    border-radius: 2px;
+    font-size: large;
+    padding: 1%;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="cont" id="outer">
+        <div class="part1">
+            <form>
+
+                <label for="name" class="block">Name :</label>
+                <input type="text" id="name" class="block">
+                <label for="price" class="block">Price :</label>
+                <input type="range" id="price" class="block">
+                <label for="catagory" class="block">Catagory :</label>
+                <input type="text" id="catagory" class="block">
+                <label for="EDD" class="block">Estimated Delivery Days :</label>
+                <input type="number" id="EDD" class="block">
+                <label for="description" class="block">Description :</label>
+                <input type="text" id="description" class="block">
+            </form>
+            <button id="add">Add Product</button>
+        </div>
+        <div class="part2" id="inner">
+           
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+var btn =document.getElementById('add');
+var cont = document.getElementById('outer');
+function addProduct(){
+
+var inner = document.getElementById('inner');
+
+var p1 = document.createElement('div');
+p1.innerText = "product1"
+p1.setAttribute('class', 'p1')
+p1.style.border = "1px solid black";
+let btn_1_1 = document.createElement('button');
+btn_1_1.innerText = "Delete Product"
+let btn_1_2 = document.createElement('button');
+btn_1_2.innerText = "Update Price"
+
+var p2 = document.createElement('div');
+p2.setAttribute('class', 'p2')
+p2.innerText = "product2"
+p2.style.border = "1px solid black";
+let btn_2_1 = document.createElement('button');
+btn_2_1.innerText = "Delete Product"
+let btn_2_2 = document.createElement('button');
+btn_2_2.innerText = "Update Price"
+
+var p3 = document.createElement('div');
+p3.setAttribute('class', 'p3')
+p3.innerText = "product3"
+p3.style.border = "1px solid black";
+let btn_3_1 = document.createElement('button');
+btn_3_1.innerText = "Delete Product"
+let btn_3_2 = document.createElement('button');
+btn_3_2.innerText = "Update Price"
+
+var p4 = document.createElement('div');
+p4.setAttribute('class', 'p4')
+p4.innerText = "product4"
+p4.style.border = "1px solid black";
+let btn_4_1 = document.createElement('button');
+btn_4_1.innerText = "Delete Product"
+let btn_4_2 = document.createElement('button');
+btn_4_2.innerText = "Update Price"
+
+var p5 = document.createElement('div');
+p5.setAttribute('class', 'p5')
+p5.innerText = "product5"
+p5.style.border = "1px solid black";
+let btn_5_1 = document.createElement('button');
+btn_5_1.innerText = "Delete Product"
+let btn_5_2 = document.createElement('button');
+btn_5_2.innerText = "Update Price"
+
+var p6 = document.createElement('div');
+p6.setAttribute('class', 'p6')
+p6.innerText = "product6"
+p6.style.border = "1px solid black";
+let btn_6_1 = document.createElement('button');
+btn_6_1.innerText = "Delete Product"
+let btn_6_2 = document.createElement('button');
+btn_6_2.innerText = "Update Price"
+
+inner.style.display= "grid"
+// inner.style.border= "1px solid green"
+inner.style.gridGap= "10%"
+inner.style.gridTemplateColumns= "auto "
+
+// inner.style.gridTemplateRows= "auto auto auto"
+inner.style.gridTemplate= "a b c"
+                          "d e f";
+// inner.style.display= "grid"
+// inner.style.display= "grid"
+p1.style.gridArea = "a";
+p2.style.gridArea = "b";
+p3.style.gridArea = "c";
+p4.style.gridArea = "d";
+p5.style.gridArea = "e";
+p6.style.gridArea = "f";
+
+inner.appendChild(p1)
+inner.appendChild(p2)
+inner.appendChild(p3)
+inner.appendChild(p4)
+inner.appendChild(p5)
+inner.appendChild(p6)
+// inner.appendChild(p7)
+
+p1.appendChild(btn_1_1)
+p1.appendChild(btn_1_2)
+p2.appendChild(btn_2_2)
+p2.appendChild(btn_2_2)
+p3.appendChild(btn_3_2)
+p3.appendChild(btn_3_2)
+p4.appendChild(btn_4_2)
+p4.appendChild(btn_4_2)
+p5.appendChild(btn_5_2)
+p5.appendChild(btn_5_2)
+p6.appendChild(btn_6_2)
+p6.appendChild(btn_6_2)
+}
+btn.addEventListener('click', addProduct);
+</script>
